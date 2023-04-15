@@ -53,7 +53,7 @@ export class App extends React.Component {
         <h1>Phonebook</h1>
         <ContactForm onSubmit={this.formSubmitHandler} />
         <h2>Contacts</h2>
-        {contacts.length > 1 && <Filter value={filter} onChange={this.onChange} />}
+        {contacts.length >= 1 && <Filter value={filter} onChange={this.onChange} />}
         {contacts.length > 0 ? (
           <ContactList contacts={visibleContact} onDeleteContact={this.onDeleteContact} />
         ) : (
